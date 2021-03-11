@@ -1,4 +1,4 @@
-@extends('backend.layout')
+@extends('Backend.layout')
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <section class="content-header">

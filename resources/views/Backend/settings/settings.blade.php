@@ -1,4 +1,4 @@
-@extends('backend.layout')
+@extends('Backend.layout')
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <section class="content-header">
@@ -12,9 +12,9 @@
                     <thead>
                     <tr>
                         <th>Id</th>
+                        <th>Başlık</th>
                         <th>İçerik</th>
-                        <th>Anahtar Değer</th>
-                        <th>Value Değeri</th>
+                        <th>Anahtar Kelimeler</th>
                         <th>Tip</th>
                     </tr>
 
