@@ -116,18 +116,21 @@ desired effect
                                                 <img src="/Backend/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <!-- Message title and timestamp -->
-
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
                                             <!-- The message -->
-
+                                            <p>Why not buy a new awesome theme?</p>
                                         </a>
                                     </li>
                                     <!-- end message -->
                                 </ul>
                                 <!-- /.menu -->
                             </li>
-
+                            <li class="footer"><a href="#">See All Messages</a></li>
                         </ul>
-
+                    </li>
                     <!-- /.messages-menu -->
 
                     <!-- Notifications Menu -->
@@ -138,7 +141,7 @@ desired effect
 
                                 <!-- Inner Menu: contains the notifications -->
 
-
+                            </li>
                             <li class="footer"><a href="#">View all</a></li>
                         </ul>
                     </li>
@@ -175,28 +178,42 @@ desired effect
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="/images/users/{{Auth::user()->user_file}}" class="user-image" alt="User Image">
+                            <img src="/Backend/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">{{Auth::user()->name}}</span>
+                            <span class="hidden-xs">Mehmet Küçükçelebi</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="/images/users/{{Auth::user()->user_file}}" class="img-circle" alt="User Image">
+                                <img src="/Backend/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    {{Auth::user()->name}}<!-- bu komut giriş yapmış olan kullanıcının bilgilerini çekiyor -->
-                                    <small>Üyelik Tarihi. 2021</small><!-- Veri tabanına üyelik tarihini kaydedersem buraya üyelik tarihini çekerim -->
+                                    Mehmet Küçükçelebi - Web Developer
+                                    <small>Üyelik Tarihi. 2021</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Takipçiler</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Satışlar</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Arkadaşlar</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{route('user.edit',Auth::user()->id)}}" class="btn btn-default btn-flat">Profil Düzenle</a>
+                                    <a href="#" class="btn btn-default btn-flat">Profil</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{route('admin.Logout')}}" class="btn btn-default btn-flat">Çıkış Yap</a>
+                                    <a href="#" class="btn btn-default btn-flat">Çıkış Yap</a>
                                 </div>
                             </li>
                         </ul>
@@ -229,14 +246,12 @@ desired effect
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="/images/users/{{Auth::user()->user_file}}" class="img-circle" alt="User Image">
+                    <img src="/Backend/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>{{Auth::user()->name}}</p>
+                    <p>Mehmet Küçükçelebi</p>
                     <!-- Status -->
                     <a href="#"><i class="fa fa-circle text-success"></i> Aktif</a>
-
-
                 </div>
             </div>
 
@@ -248,22 +263,17 @@ desired effect
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MENÜLER</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="{{route('Backend.Admin')}}"><i class="fa fa-home" aria-hidden="true"></i> <span>Anasayfa</span></a></li>
+                <li class="active"><a href="{{route('Backend.admin')}}"><i class="fa fa-link"></i> <span>Anasayfa</span></a></li>
                 <li><a href="{{route('blog.index')}}"><i class="fa fa-paper-plane"></i> <span>Blog</span></a></li>
-                <li><a href="{{route('slider.index')}}"><i class="fa fa-sliders" aria-hidden="true"></i> <span>Slider</span></a></li>
-                <li><a href="{{route('Pages.index')}}"><i class="fa fa-envira" aria-hidden="true"></i> <span>Page</span></a></li>
+                <li><a href="{{route('Backend.AdminSettings')}}"><i class="fa fa-cog"></i> <span>Ayarlar</span></a></li>
 
+                <li class="treeview">
 
-                <li class="treeview active">
-                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i> <span>Yönetim</span>
                         <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                              </span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{route('user.index')}}"><i class="fa fa-user-secret" aria-hidden="true"></i> <span>Yöneticiler</span></a></li>
-                        <li><a href="{{route('Backend.AdminSettings')}}"><i class="fa fa-cog"></i> <span>Ayarlar</span></a></li>
-                    </ul>
+
                 </li>
             </ul>
             <!-- /.sidebar-menu -->
@@ -328,17 +338,16 @@ desired effect
             <!-- Settings tab content -->
 
                     <!-- /.form-group -->
-    </div>
-
-
+                </form>
+            </div>
             <!-- /.tab-pane -->
-
-
+        </div>
+    </aside>
     <!-- /.control-sidebar -->
     <!-- Add the sidebar's background. This div must be placed
     immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-
+</div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->

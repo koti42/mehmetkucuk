@@ -1,15 +1,11 @@
-@extends('Backend.layout')
+@extends('backend.layout')
 @section('content')
     <section class="content-header">
 
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">Blogs</h3>
-<!--bu kısımda ekle butonu tanımlandı ve a'nın href özelliği ile blog.create metoduna gönderme yapıldı
-web.php de kullanmış olduğumuz prefix yapısının içinde birden fazla hazır sınıf mevcut -->
-                <div align="right">
-    <a href="{{route('blog.create')}}"><button class="btn btn-success">Ekle</button></a>
-</div>
+
 
             </div>
             <div class="box-body">
